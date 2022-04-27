@@ -7,12 +7,23 @@
     "jest": "^27.5.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "anchorme": "^2.1.2",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^2.0.7",
+    "jssoup": "0.0.15",
+    "path": "^0.12.7",
+    "underscore": "^1.13.3",
+    "voca": "^1.4.0",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "copy": "npm run build && cat dist/bundle.js | pbcopy",
+    "app": "node ./dist/bundle.js"
   },
   "author": "Evan Nagle",
   "license": "ISC"
